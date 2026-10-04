@@ -1,0 +1,1 @@
+{ "generators": { "foo": { "factory": "./src/foo/generator", "schema": "./src/foo/schema.json" } } }

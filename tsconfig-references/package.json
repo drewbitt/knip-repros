@@ -1,0 +1,7 @@
+{
+  "name": "tsconfig-references",
+  "private": true,
+  "type": "module",
+  "scripts": { "knip": "knip" },
+  "devDependencies": { "knip": "6.39.0", "typescript": "^7.0.0" }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "nx-generators",
+  "private": true,
+  "type": "module",
+  "generators": "./generators.json",
+  "scripts": { "g": "nx g nx-generators:foo", "knip": "knip" },
+  "devDependencies": { "knip": "6.39.0", "nx": "^23.0.0" }
+}

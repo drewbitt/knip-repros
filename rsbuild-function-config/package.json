@@ -1,0 +1,7 @@
+{
+  "name": "rsbuild-function-config",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "rsbuild build", "knip": "knip" },
+  "devDependencies": { "@rsbuild/core": "^2.0.0", "knip": "6.39.0" }
+}

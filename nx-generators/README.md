@@ -1,10 +1,10 @@
 # Nx plugin doesn't read `generators` from package.json
 
-`package.json` points `generators` at `generators.json`, which names `./src/foo/generator` as the factory. `nx g nx-generators:foo` loads it.
+`tools/my-plugin` is a local Nx plugin, laid out like `@nx/plugin` creates. Its `package.json` points `generators` at `generators.json`, which names `./src/foo/generator` as the factory.
 
-`npx knip` reports:
+`npx nx g my-plugin:foo --dry-run` runs the generator. `npx knip` reports:
 
 ```
 Unused files (1)
-src/foo/generator.ts
+tools/my-plugin/src/foo/generator.ts
 ```

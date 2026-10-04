@@ -1,0 +1,6 @@
+{
+  "name": "my-plugin",
+  "private": true,
+  "type": "module",
+  "generators": "./generators.json"
+}

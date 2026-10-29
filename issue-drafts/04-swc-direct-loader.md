@@ -1,6 +1,6 @@
 # SWC plugin dependencies are missed in direct loader rules
 
-Reproduction URL: https://github.com/drewbitt/knip-repros/tree/remaining-gaps-2026-10-29/swc-direct-loader
+Reproduction URL: https://github.com/drewbitt/knip-repros/tree/main/swc-direct-loader
 
 A rule with `loader: 'builtin:swc-loader'` and `options` builds successfully, but Knip reports `@swc/plugin-emotion` unused.
 

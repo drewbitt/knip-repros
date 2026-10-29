@@ -1,6 +1,6 @@
 # Rsbuild tools.swc plugin dependencies are reported as unused
 
-Reproduction URL: https://github.com/drewbitt/knip-repros/tree/remaining-gaps-2026-10-29/rsbuild-swc
+Reproduction URL: https://github.com/drewbitt/knip-repros/tree/main/rsbuild-swc
 
 `@swc/plugin-emotion` is listed in `tools.swc.jsc.experimental.plugins`. The Rsbuild build succeeds, but Knip reports the package unused.
 

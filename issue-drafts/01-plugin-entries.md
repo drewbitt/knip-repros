@@ -1,6 +1,6 @@
 # Plugin entry globs drop files in child workspaces
 
-Reproduction URL: https://github.com/drewbitt/knip-repros/tree/remaining-gaps-2026-10-29/plugin-entries-in-child-workspaces
+Reproduction URL: https://github.com/drewbitt/knip-repros/tree/main/plugin-entries-in-child-workspaces
 
 `npm test` passes, but `npm run check` reports `packages/lib/src/check.ts` and its imported `value.ts` as unused. The root Vitest config includes the test through an inline project.
 

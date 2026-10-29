@@ -1,31 +1,21 @@
 # knip repros
 
-Minimal reproductions for [Knip](https://github.com/webpro-nl/knip), one per folder.
-
-## New cases
-
-Tested independently with Knip 6.43.0. Each folder pins its direct dependencies.
-
-| Reproduction | Issue draft |
-| --- | --- |
-| [Plugin entries in child workspaces](./plugin-entries-in-child-workspaces) | [Draft](./issue-drafts/01-plugin-entries.md) |
-| [Rsbuild aliases](./rsbuild-alias) | [Draft](./issue-drafts/02-rsbuild-alias.md) |
-| [Rsbuild SWC plugins](./rsbuild-swc) | [Draft](./issue-drafts/03-rsbuild-swc.md) |
-| [SWC plugins in direct loader rules](./swc-direct-loader) | [Draft](./issue-drafts/04-swc-direct-loader.md) |
+Minimal reproductions for [knip](https://github.com/webpro-nl/knip) issues, one per folder.
 
 ```sh
 cd <folder>
 npm install
-npm run check
+npx knip
 ```
 
-The check currently exits 1 with the findings described in each README. The Vitest test passes, and all three Rsbuild examples build. Each Rsbuild finding disappears when its option is moved to the supported alternative described in the README.
+New cases use knip 6.43.0:
 
-These are drafts; no new upstream issues have been filed. Review the text before submission. Use Knip's Bug report form and place the reproduction URL in its own field.
+- [plugin-entries-in-child-workspaces](./plugin-entries-in-child-workspaces): root plugin entry globs drop files in child workspaces
+- [rsbuild-alias](./rsbuild-alias): Rsbuild `resolve.alias` targets appear unused
+- [rsbuild-swc](./rsbuild-swc): plugins in Rsbuild `tools.swc` appear unused
+- [swc-direct-loader](./swc-direct-loader): SWC plugins in direct loader rules appear unused
 
-## Earlier reports
-
-These reports are fixed upstream. Their folders retain the original Knip 6.39.0 versions.
+Earlier reports are fixed upstream. These folders keep knip 6.39.0:
 
 - [vitest-root](./vitest-root): [#2114](https://github.com/webpro-nl/knip/issues/2114)
 - [rsbuild-function-config](./rsbuild-function-config): [#2115](https://github.com/webpro-nl/knip/issues/2115)

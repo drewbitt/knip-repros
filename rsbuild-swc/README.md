@@ -1,11 +1,10 @@
-# Rsbuild SWC plugins
+# Rsbuild tools.swc plugins appear unused
 
-```sh
-npm install
-npm exec -- rsbuild build
-npm run check
+`npm exec -- rsbuild build` succeeds. `npx knip` reports:
+
+```
+Unused devDependencies (1)
+@swc/plugin-emotion  package.json
 ```
 
-The build succeeds. Knip reports `@swc/plugin-emotion` unused. Supplying the same SWC options through `tools.rspack.module.rules` with a `use` object clears the finding.
-
-Knip 6.43.0. The dependencies in package.json are pinned.
+Putting the same SWC options in a `use` object under `tools.rspack.module.rules` makes knip clean.

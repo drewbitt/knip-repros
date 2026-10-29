@@ -1,11 +1,10 @@
-# SWC plugins in direct loader rules
+# SWC plugins in direct loader rules appear unused
 
-```sh
-npm install
-npm exec -- rsbuild build
-npm run check
+`npm exec -- rsbuild build` succeeds. `npx knip` reports:
+
+```
+Unused devDependencies (1)
+@swc/plugin-emotion  package.json
 ```
 
-The build succeeds. Knip reports `@swc/plugin-emotion` unused. Moving `loader` and `options` into a `use` object clears the finding.
-
-Knip 6.43.0. The dependencies in package.json are pinned.
+Moving `loader` and `options` into `use: { loader, options }` makes knip clean.

@@ -1,11 +1,12 @@
-# Rsbuild aliases
+# Rsbuild resolve.alias targets appear unused
 
-```sh
-npm install
-npm exec -- rsbuild build
-npm run check
+`npm exec -- rsbuild build` succeeds. `npx knip` reports:
+
+```
+Unused files (1)
+src/env.ts
+Unlisted dependencies (1)
+@env  src/main.ts
 ```
 
-The build succeeds. Knip reports `src/env.ts` unused and `@env` unlisted. Moving the alias from `resolve.alias` to `tools.rspack.resolve.alias` clears both findings.
-
-Knip 6.43.0. The dependencies in package.json are pinned.
+Moving the alias from `resolve.alias` to `tools.rspack.resolve.alias` makes knip clean.

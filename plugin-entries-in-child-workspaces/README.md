@@ -1,11 +1,13 @@
-# Plugin entries in child workspaces
+# Plugin entry globs drop files in child workspaces
 
-```sh
-npm install
-npm test
-npm run check
+The root Vitest config includes `packages/lib/src/check.ts` through an inline project. `npm test` passes.
+
+`npx knip` reports:
+
+```
+Unused files (2)
+packages/lib/src/check.ts
+packages/lib/src/value.ts
 ```
 
-`npm test` passes. Knip reports `packages/lib/src/check.ts` and `packages/lib/src/value.ts` as unused. Both files belong to the inline Vitest project.
-
-Knip 6.43.0. The dependencies in package.json are pinned.
+Both files are used by the configured test project.

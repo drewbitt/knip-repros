@@ -1,0 +1,12 @@
+{
+  "name": "rsbuild-alias",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "knip --no-config-hints"
+  },
+  "devDependencies": {
+    "knip": "6.43.0",
+    "@rsbuild/core": "2.2.12"
+  }
+}

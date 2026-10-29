@@ -1,0 +1,16 @@
+{
+  "name": "plugin-entries-in-child-workspaces",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "check": "knip --no-config-hints",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "knip": "6.43.0",
+    "vitest": "5.0.3"
+  }
+}
